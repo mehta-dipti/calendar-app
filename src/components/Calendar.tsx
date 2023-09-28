@@ -29,7 +29,7 @@ export const Calendar = (props: ICalendarProps) => {
         </>
       ) : (
         <div className="year-container">
-          {monthNames.map((month, index) => (
+          {monthNames.map((_, index) => (
             <Month date={new Date(currYear, index)} monthIndex={index} />
           ))}
         </div>
