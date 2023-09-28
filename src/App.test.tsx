@@ -1,9 +1,11 @@
-import React from 'react';
-import { render, screen } from '@testing-library/react';
-import App from './App';
+import React from "react";
+import { render, screen } from "@testing-library/react";
+import App from "./App";
 
-test('renders learn react link', () => {
+test("renders learn react link", () => {
   render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+  const monthly = screen.getByText(/Monthly calendar/i);
+  const yearly = screen.getByText(/Yearly calendar/i);
+  expect(monthly).toBeInTheDocument();
+  expect(yearly).toBeInTheDocument();
 });
