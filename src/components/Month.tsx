@@ -1,9 +1,9 @@
 import { Day } from "./Day";
-import { weekDays, monthNames } from "../utils/calenderUtils";
+import { weekDays, monthNames } from "../constants/constants";
 import { IMonthProps } from "../types/interface";
 
 export const Month = (props: IMonthProps) => {
-  const { date, monthIndex, showOtherMonth } = props; //9,2
+  const { date, monthIndex } = props;
   const month = date.getMonth();
   const year = date.getFullYear();
 
@@ -18,7 +18,7 @@ export const Month = (props: IMonthProps) => {
             </div>
           ))}
         </div>
-        <Day month={month} year={year} monthIndex={monthIndex} showOtherMonth={showOtherMonth} />
+        <Day month={month} year={year} monthIndex={monthIndex} />
       </div>
     </>
   );
